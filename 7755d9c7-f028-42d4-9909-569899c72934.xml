@@ -1,0 +1,56 @@
+<joblist>
+  <job>
+    <context>
+      <options preserveOrder='true'>
+        <option name='password' required='true' secure='true' storagePath='keys/other/test.pw' valueExposed='true'>
+          <hidden>true</hidden>
+        </option>
+        <option name='password2' secure='true' storagePath='keys/somepath/space key.pw' valueExposed='true'>
+          <hidden>true</hidden>
+        </option>
+      </options>
+    </context>
+    <defaultTab>nodes</defaultTab>
+    <description></description>
+    <executionEnabled>true</executionEnabled>
+    <id>7755d9c7-f028-42d4-9909-569899c72934</id>
+    <loglevel>DEBUG</loglevel>
+    <name>testpass</name>
+    <nodeFilterEditable>false</nodeFilterEditable>
+    <plugins />
+    <scheduleEnabled>true</scheduleEnabled>
+    <schedules />
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <exec>echo ${option.password}</exec>
+        <plugins>
+          <LogFilter type='mask-passwords'>
+            <config>
+              <color>red</color>
+              <replacement>[SECURE]</replacement>
+            </config>
+          </LogFilter>
+        </plugins>
+      </command>
+      <command>
+        <plugins>
+          <LogFilter type='mask-passwords'>
+            <config>
+              <replacement>[SECURE]</replacement>
+            </config>
+          </LogFilter>
+        </plugins>
+        <script><![CDATA[
+echo "secret 1"
+echo @option.password@
+
+echo "secret 2"
+echo @option.password2@
+
+]]></script>
+        <scriptargs />
+      </command>
+    </sequence>
+    <uuid>7755d9c7-f028-42d4-9909-569899c72934</uuid>
+  </job>
+</joblist>

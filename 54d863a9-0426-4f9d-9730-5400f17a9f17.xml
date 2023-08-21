@@ -1,0 +1,20 @@
+<joblist>
+  <job>
+    <defaultTab>nodes</defaultTab>
+    <description>testing SCM Plugin</description>
+    <executionEnabled>true</executionEnabled>
+    <id>54d863a9-0426-4f9d-9730-5400f17a9f17</id>
+    <loglevel>INFO</loglevel>
+    <name>scmtest1</name>
+    <nodeFilterEditable>false</nodeFilterEditable>
+    <plugins />
+    <scheduleEnabled>true</scheduleEnabled>
+    <schedules />
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <exec>echo "hello job 1"</exec>
+      </command>
+    </sequence>
+    <uuid>54d863a9-0426-4f9d-9730-5400f17a9f17</uuid>
+  </job>
+</joblist>
