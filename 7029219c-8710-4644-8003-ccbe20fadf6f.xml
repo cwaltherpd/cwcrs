@@ -1,20 +1,20 @@
 <joblist>
   <job>
     <defaultTab>nodes</defaultTab>
-    <description>testing SCM Plugin 2023/08/22</description>
+    <description></description>
     <executionEnabled>true</executionEnabled>
-    <id>449a2d8a-2f6a-4bfd-be59-fe6cecfcd324</id>
+    <id>7029219c-8710-4644-8003-ccbe20fadf6f</id>
     <loglevel>INFO</loglevel>
-    <name>scmtest2</name>
+    <name>test_jon20230822</name>
     <nodeFilterEditable>false</nodeFilterEditable>
     <plugins />
     <scheduleEnabled>true</scheduleEnabled>
     <schedules />
     <sequence keepgoing='false' strategy='node-first'>
       <command>
-        <exec>echo "hello job 2"</exec>
+        <exec>echo "Hello Cruise team"</exec>
       </command>
     </sequence>
-    <uuid>449a2d8a-2f6a-4bfd-be59-fe6cecfcd324</uuid>
+    <uuid>7029219c-8710-4644-8003-ccbe20fadf6f</uuid>
   </job>
 </joblist>
